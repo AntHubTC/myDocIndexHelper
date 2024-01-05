@@ -1,0 +1,7 @@
+doc-client/package-lock.json
+doc-client/node_modules/
+doc-client/index-dir/
+doc-server/.idea/
+doc-server/index-dir/
+doc-server/target/
+doc-server/*.iml

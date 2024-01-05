@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档搜索助手</title>
+    <link rel="stylesheet" type="text/css" href="../res/elementUI/chalk/index.css">
+    <script type="text/javascript" src="../res/third/vue-2.6.14.js"></script>
+    <script type="text/javascript" src="../res/elementUI/elementui-2.15.8.js"></script>
+    <script type="text/javascript" src="../res/third/axios-0.27.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../res/css/settingsPage.css">
+    <script type="text/javascript" src="../renderer/common.js"></script>
+</head>
+<body>
+    <div id="app" class="main-box">
+        <div>
+            <div class="tag-box">
+                <span class="inline-block tag-box-header">搜索配置</span>
+                <el-form label-width="80px" :model="useConfig">
+                    <el-form-item label="命中数">
+                        <el-input-number v-model="useConfig.hitsNum" size="mini" :min="1" :max="100" label="命中数"></el-input-number>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-button size="small" @click="saveUseConfig">保存</el-button>
+                    </el-form-item>
+                </el-form>
+            </div>
+            <div class="tag-box">
+                <span class="inline-block tag-box-header">索引配置</span>
+                <el-form label-width="80px" :model="indexConfig">
+                    <el-form-item label="文档路径">
+                      <el-input v-model="indexConfig.path"></el-input>
+                    </el-form-item>
+                    <el-form-item label="分词器">
+                        <el-select v-model="indexConfig.spliter" placeholder="请选择分词器">
+                            <el-option label="smartCnAnalyse" value="smartCnAnalyse"></el-option>
+                            <el-option label="ck" value="ck"></el-option>
+                          </el-select>
+                    </el-form-item>
+                    <el-form-item label="相关行数">
+                        <el-input-number v-model="indexConfig.readLineNum" size="mini" :min="1" :max="20" label="命中数"></el-input-number>
+                    </el-form-item>
+                    <div class="progress-box" v-show="showProgress">
+                        <span class="progress-text" :style="progressStyle">{{progressNum}} %</span>
+                        <div class="progress-bar">
+                            <div class="progress" :style="progressStyle"></div>
+                        </div>
+                        <span class="progress-text">{{progressText}}</span>
+                    </div>
+                    <el-form-item>
+                        <el-button size="small" @click="saveIndexConfig">保存</el-button>
+                        <el-button size="small" @click="startIndex">索引</el-button>
+                    </el-form-item>
+                </el-form>
+            </div>
+        </div>
+    </div>
+    <script src="../renderer/settingsPage.js"></script>
+</body>
+</html>

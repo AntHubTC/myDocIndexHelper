@@ -1,0 +1,67 @@
+2024-01-04 16:48:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "                      
+create table if not exists KV_INFO (
+    KEY varchar2(400) not null,
+    VALUE varchar2(400),
+    COMMENT varchar2(1000)
+    primary key ([*]`KEY`)
+)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+-- drop table KV_INFO;
+create table if not exists KV_INFO (
+    KEY varchar2(400) not null,
+    VALUE varchar2(400),
+    COMMENT varchar2(1000)
+    primary key (`KEY`)
+) [42001-200]
+2024-01-04 16:48:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "YCC_CONFIG" not found; SQL statement:
+comment on column YCC_CONFIG.KEY is '键' [42102-200]
+2024-01-04 16:48:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "YCC_CONFIG" not found; SQL statement:
+comment on column YCC_CONFIG.VALUE is '值' [42102-200]
+2024-01-04 16:48:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "YCC_CONFIG" not found; SQL statement:
+comment on column YCC_CONFIG.COMMENT is '注释' [42102-200]
+2024-01-04 16:48:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "KV_INFO" not found; SQL statement:
+comment on table KV_INFO is 'kv配置表' [42102-200]
+2024-01-04 16:48:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "                      
+create table if not exists KV_INFO (
+    KEY varchar2(400) not null,
+    VALUE varchar2(400),
+    COMMENT varchar2(1000)
+    primary key ([*]`KEY`)
+)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+-- drop table KV_INFO;
+create table if not exists KV_INFO (
+    KEY varchar2(400) not null,
+    VALUE varchar2(400),
+    COMMENT varchar2(1000)
+    primary key (`KEY`)
+) [42001-200]
+2024-01-04 16:48:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "YCC_CONFIG" not found; SQL statement:
+comment on column YCC_CONFIG.KEY is '键' [42102-200]
+2024-01-04 16:48:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "YCC_CONFIG" not found; SQL statement:
+comment on column YCC_CONFIG.VALUE is '值' [42102-200]
+2024-01-04 16:48:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "YCC_CONFIG" not found; SQL statement:
+comment on column YCC_CONFIG.COMMENT is '注释' [42102-200]
+2024-01-04 16:48:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "KV_INFO" not found; SQL statement:
+comment on table KV_INFO is 'kv配置表' [42102-200]
+2024-01-04 16:48:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table if not exists KV_INFO (
+    KEY varchar2(400) not null,
+    VALUE varchar2(400),
+    COMMENT varchar2(1000)
+    primary key ([*]`KEY`)
+)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+create table if not exists KV_INFO (
+    KEY varchar2(400) not null,
+    VALUE varchar2(400),
+    COMMENT varchar2(1000)
+    primary key (`KEY`)
+) [42001-200]
